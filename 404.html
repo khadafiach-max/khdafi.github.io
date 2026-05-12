@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Halaman Tidak Ditemukan | Achmad Khadafi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --blue:   #0051BA; --blue-light: #1a6dd4;
+      --yellow: #FFDA1A; --yellow-glow: rgba(255,218,26,0.3);
+      --bg:     #060b14; --text: #eef2ff; --text2: #8898b8; --text3: #4a5a78;
+      --border: rgba(255,255,255,0.07); --border2: rgba(0,81,186,0.35);
+      --surface: rgba(255,255,255,0.04);
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; display: flex;
+      align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
+    }
+    .bg-blob {
+      position: fixed; border-radius: 50%;
+      filter: blur(120px); opacity: 0.12;
+      pointer-events: none; animation: blobPulse 10s ease-in-out infinite alternate;
+    }
+    .bg-blob-1 { width:600px;height:600px; background:radial-gradient(circle,var(--blue),transparent 70%); top:-200px;right:-150px; }
+    .bg-blob-2 { width:400px;height:400px; background:radial-gradient(circle,var(--yellow),transparent 70%); bottom:-100px;left:-120px; animation-delay:-5s; }
+    @keyframes blobPulse { 0%{transform:scale(1)} 100%{transform:scale(1.25) translate(30px,-20px)} }
+    .grid-bg {
+      position:fixed;inset:0;
+      background-image:linear-gradient(rgba(0,81,186,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,81,186,0.04) 1px,transparent 1px);
+      background-size:60px 60px; pointer-events:none;
+    }
+    .brand {
+      position:fixed;top:28px;left:40px;
+      font-family:'Syne',sans-serif;font-size:1.5rem;
+      font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.04em;
+    }
+    .brand span { color:var(--yellow); }
+    .container {
+      text-align:center; position:relative; z-index:1;
+      padding:40px 24px; max-width:540px;
+    }
+    .error-num {
+      font-family:'Syne',sans-serif;
+      font-size: clamp(7rem,22vw,11rem);
+      font-weight:800; letter-spacing:-0.06em; line-height:1;
+      background:linear-gradient(135deg, var(--blue), var(--yellow));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text; margin-bottom:8px;
+      animation:floatNum 3s ease-in-out infinite;
+    }
+    @keyframes floatNum { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+    .error-icon {
+      font-size:36px; margin-bottom:18px;
+      color:var(--yellow);
+      animation:spin 7s linear infinite; display:inline-block;
+    }
+    @keyframes spin { to{transform:rotate(360deg)} }
+    h1 {
+      font-family:'Syne',sans-serif;
+      font-size:clamp(1.4rem,4vw,2rem);
+      font-weight:700; letter-spacing:-0.03em;
+      color:var(--text); margin-bottom:12px;
+    }
+    p { font-size:15px; color:var(--text2); line-height:1.8; margin-bottom:36px; }
+    .btn-group {
+      display:flex; gap:12px; justify-content:center;
+      flex-wrap:wrap; margin-bottom:48px;
+    }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:13px 28px; background:var(--blue);
+      color:#fff; border-radius:50px;
+      font-weight:700; font-size:14px; text-decoration:none;
+      border:2px solid var(--blue);
+      transition:all 0.3s ease;
+    }
+    .btn-primary:hover { background:var(--blue-light); transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,81,186,0.4); }
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:13px 28px; border:2px solid var(--border2);
+      color:var(--text2); border-radius:50px;
+      font-weight:500; font-size:14px; text-decoration:none;
+      transition:all 0.3s ease;
+    }
+    .btn-ghost:hover { border-color:var(--yellow); color:var(--yellow); transform:translateY(-2px); }
+    .quick-links { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+    .quick-link {
+      padding:6px 16px; background:var(--surface);
+      border:1px solid var(--border); border-radius:50px;
+      font-size:12px; color:var(--text3); text-decoration:none;
+      transition:all 0.25s ease;
+    }
+    .quick-link:hover { color:var(--yellow); border-color:var(--yellow); }
+  </style>
+</head>
+<body>
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="grid-bg"></div>
+
+  <a href="index.html" class="brand">AK<span>.</span></a>
+
+  <div class="container">
+    <div class="error-num">404</div>
+    <i class="fas fa-compass error-icon"></i>
+    <h1>Halaman Tidak Ditemukan</h1>
+    <p>Sepertinya halaman yang kamu cari tidak ada atau sudah dipindahkan. Mungkin ada typo di URL? Tenang, kita bisa kembali ke jalur yang benar!</p>
+    <div class="btn-group">
+      <a href="index.html" class="btn-primary"><i class="fas fa-house"></i> Kembali ke Home</a>
+      <a href="javascript:history.back()" class="btn-ghost"><i class="fas fa-arrow-left"></i> Halaman Sebelumnya</a>
+    </div>
+    <div class="quick-links">
+      <a href="index.html#tentang"  class="quick-link">Tentang</a>
+      <a href="index.html#keahlian" class="quick-link">Keahlian</a>
+      <a href="index.html#proyek"   class="quick-link">Proyek</a>
+      <a href="index.html#kontak"   class="quick-link">Kontak</a>
+    </div>
+  </div>
+</body>
+</html>
